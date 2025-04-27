@@ -9,3 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {// All DOM-related initiali
   const scoreDisplay = document.getElementById("score"); // Element to display the user's score
   const restartBtn = document.getElementById("restart-btn"); // Button to restart the quiz
 });
+
+const questions = [
+  {
+    question: "What is the capital of France?",
+    choices: ["Paris", "London", "Berlin", "Madrid"],
+    answer: "Paris",
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    choices: ["Mars", "Venus", "Jupiter", "Saturn"],
+    answer: "Mars",
+  },
+  {
+    question: "Who wrote 'Hamlet'?",
+    choices: [
+      "Charles Dickens",
+      "Jane Austen",
+      "William Shakespeare",
+      "Mark Twain",
+    ],
+    answer: "William Shakespeare",
+  },
+];
