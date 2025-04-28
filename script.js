@@ -44,4 +44,20 @@ document.addEventListener("DOMContentLoaded", () => {
     questionContainer.classList.remove("hidden");
     showQuestion();
   }
+
+  function showQuestion() {
+    nextBtn.classList.add("hidden");
+    questionText.textContent = questions[currentQuestionIndex].question;
+    choicesList.innerHTML = ""; // Clear previous choices
+    questions[currentQuestionIndex].choices.forEach((choice) => {
+      const li = document.createElement("li");
+      li.textContent = choice;
+      li.addEventListener("click", () => selectAnswer(choice)); // ovo je callback i mora da bude arrow function zato sto imamo parametar
+      // da smo samo stavili selectAnswer(choice) to bi se odmah pozvalo
+      // da nemamo parametar mogli bi da stavimo samo selectAnswer A posto imamo parametar choice moramo da stavimo arrow function
+      choicesList.appendChild(li);
+    });
+  }
+
+  function selectAnswer(choice) {}
 });
