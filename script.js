@@ -37,6 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let score = 0; // User's score
 
   startBtn.addEventListener("click", startQuiz); // Event listener for the start button
+  nextBtn.addEventListener("click", nextQ);
+
+  function nextQ(){
+    currentQuestionIndex++
+    if(currentQuestionIndex < questions.length){
+      showQuestion()
+    }else{
+      showResult()
+    }
+  }
 
   function startQuiz() {
     startBtn.classList.add("hidden"); // Hide the start button
