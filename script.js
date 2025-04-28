@@ -59,5 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function selectAnswer(choice) {}
+  function selectAnswer(choice) {
+    const correctAnswer = questions[currentQuestionIndex].answer;
+    if (choice === correctAnswer) {
+      score++;
+    }
+    nextBtn.classList.remove("hidden");
+  }
 });
