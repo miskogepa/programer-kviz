@@ -80,6 +80,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function showResult() {
     questionContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
-    scoreDisplay.textContent = `${score} out of ${questions.length}`
+    scoreDisplay.textContent = `${score} out of ${questions.length}`;
   }
+
+  restartBtn.addEventListener("click", () => {
+    currentQuestionIndex = 0
+    score = 0
+    resultContainer.classList.add("hidden")
+    startQuiz()
+  });
 });
